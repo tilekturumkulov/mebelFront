@@ -1,0 +1,99 @@
+.checkout{
+  padding: 40px 0 102px;
+
+  &__form{
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 300px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    row-gap:60px;
+
+
+    &-block{
+      width: calc(50% - 150px);
+    }
+
+    &-title{
+      font-weight: 500;
+      font-size: 15px;
+      margin-bottom: 47px;
+    }
+
+    &-fields{
+      display: flex;
+      flex-direction: column;
+      row-gap: 35px;
+    }
+
+    &-field{
+      border: none;
+      border-bottom: 1px solid black;
+      padding-bottom:16px;
+      outline: none;
+
+    }
+
+    &-list{
+      display: flex;
+      flex-direction: column;
+      row-gap: 35px;
+    }
+
+    &-item {
+      display: flex;
+      justify-content: space-between;
+      padding: 0 24px;
+      font-weight: 500;
+      font-size: 20px;
+      letter-spacing: 0.02em;
+      &-count{
+        padding: 15px 24px;
+      }
+    }
+
+
+    &-lable{
+      display: flex;
+      align-items: center;
+      font-size: 17px;
+      column-gap: 14px;
+      input{
+        width: 22px;
+        height: 22px;
+        background-color: black;
+      }
+    }
+    &-btn{
+      padding: 22px 50px;
+      background: #6E9C9F;
+      font-size: 17px;
+      letter-spacing: 0.02em;
+    }
+
+    &-comit{
+      border: none;
+      outline: none;
+      padding-bottom:110px ;
+      border-bottom: 1px solid black;
+      width: 100%;
+    }
+  }
+
+
+  &__popup{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    z-index: 10;
+    transform: translate(-50% - 50%);
+    background: #6E9C9F;
+    padding: 40px 60px;
+    text-align: center;
+
+  }
+
+
+
+
+}

@@ -119,6 +119,20 @@ const Context = (props) => {
         })
     }
 
+    const  deleteCartsItem = (id) => {
+        api.patch(`users/${user.id}`,{
+            headers: {
+                'content-type': 'application/json'
+            },
+            json: {
+                carts: user.carts.filter((item) => item.id !== id )
+            }
+        }).json().then((res) => {
+            setUser(res);
+            localStorage.setItem('user', JSON.stringify(res));
+        })
+    }
+
 
     const  addOrder = (order,setPopup,redirect) => {
         api.patch(`users/${user.id}`,{
@@ -126,6 +140,7 @@ const Context = (props) => {
                 'content-type': 'application/json'
             },
             json: {
+                // point: Math.floor(user.point + ( order.totalPrice / 100 * 7)),
                 orders:[
                     ...user.orders,order
                 ],
@@ -137,7 +152,6 @@ const Context = (props) => {
             setPopup(true)
             redirect()
         })
-
 
     }
 
@@ -176,8 +190,8 @@ const Context = (props) => {
         addCarts,
         addCartsCountPlus,
         addCartsCountMinus,
-        addOrder
-
+        addOrder,
+        deleteCartsItem
 };
 
     return (

@@ -36,6 +36,17 @@
         object-fit: cover;
       }
     }
+    &-price{
+      display: flex;
+      flex-direction: column;
+      font-size: 18px;
+      justify-content: center;
+      row-gap: 20px;
+      span:nth-child(2){
+        color: #245462;
+        font-weight: 800;
+      }
+    }
 
     &-info{
       display: flex;
@@ -68,6 +79,7 @@
     &-delete{
       width: 5%;
       padding: 56px 0;
+      font-size: 24px;
     }
 
   }

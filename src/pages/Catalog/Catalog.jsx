@@ -8,7 +8,7 @@ const Catalog = () => {
     const [products, setProducts] = useState([]);
     const [category , setCategory] = useState('')
     const [ sort ,setSort] = useState('')
-    const  [ slider, setSlider] = useState([0, 3000])
+    const  [ slider, setSlider] = useState([0, 30000])
     const {search} = useContext(CustomContext);
 
     useEffect(() => {

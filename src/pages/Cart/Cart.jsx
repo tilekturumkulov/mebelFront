@@ -4,7 +4,7 @@ import {useNavigate} from "react-router-dom";
 
 const Cart = () => {
 
-    const {user,addCartsCountMinus,addCartsCountPlus} = useContext(CustomContext)
+    const {user,addCartsCountMinus,addCartsCountPlus,deleteCartsItem} = useContext(CustomContext)
     const  navigate = useNavigate()
 
 
@@ -48,13 +48,17 @@ const Cart = () => {
                                          </p>
                                      </div>
                                      <p className='cart__card-price'>
+                                        <span>
                                          {item.price}$
+                                        </span>
+                                        <span>
                                          {
                                              item.price * item.count
                                          }$
+                                        </span>
                                      </p>
                                  </div>
-                                 <button className="cart__card-delete">
+                                 <button className="cart__card-delete" onClick={() => deleteCartsItem(item.id)}>
                                      x
                                  </button>
                              </div>
@@ -64,7 +68,7 @@ const Cart = () => {
                     </div>
 
                 {
-                    user.carts.length ?  <div className='cart__bottom'>
+                    user.carts?.length ?  <div className='cart__bottom'>
                         <p className='cart__bottom-count'>
                             Итоговая стоимость:
                             {user.carts?.reduce((acc,rec) => acc + rec.price * rec.count, 0)}

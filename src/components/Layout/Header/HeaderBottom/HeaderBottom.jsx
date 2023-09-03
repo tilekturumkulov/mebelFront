@@ -7,52 +7,52 @@ import {BsThreeDotsVertical} from 'react-icons/bs';
 import {MdOutlineChildFriendly} from 'react-icons/md';
 
 const HeaderBottom = () => {
-    const [con , setCON] = useState(false)
+    // letCategoryApiCitchen = `products?_category_like=Двухспальные кровати`
     return (
         <nav className='header__bottom'>
-                <a href="#" className='header__bottom-link'  >
+            <a href="#" className='header__bottom-link'  >
                         <span>
                         <MdKitchen/>
                         </span>
                 Кухни
             </a>
             <a href="#" className='header__bottom-link'>
-<span>
-  <GiPersonInBed/>
-</span>
+                <span>
+                <GiPersonInBed/>
+                </span>
                 Спальни
             </a>
             <a href="#" className='header__bottom-link'>
-<span>
-    <MdOutlineLiving/>
-</span>
+                <span>
+                    <MdOutlineLiving/>
+                </span>
                 Гостинные
             </a>
             <a href="#" className='header__bottom-link'>
-<span>
-    <MdKitchen/>
-</span>
+                <span>
+                    <MdKitchen/>
+                </span>
                 Прихожие
             </a>
             <a href="#" className='header__bottom-link'>
-<span>
-    <HiDesktopComputer/>
-</span>
+                <span>
+                    <HiDesktopComputer/>
+                </span>
                 Офисная мебель
             </a>
             <a href="#" className='header__bottom-link'>
-<span>
-    <MdOutlineChildFriendly/>
-</span>
+                <span>
+                    <MdOutlineChildFriendly/>
+                </span>
                 Детская
             </a>
             <a href="#" className='header__bottom-link red'>
                 Акция
             </a>
             <a href="#" className='header__bottom-link'>
-<span>
-  <BsThreeDotsVertical/>
-</span>
+                <span>
+                <BsThreeDotsVertical/>
+                </span>
 
             </a>
         </nav>

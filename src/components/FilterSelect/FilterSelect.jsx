@@ -29,7 +29,7 @@ const FilterSelect = ({state,setState,array,title}) => {
                             }</MenuItem>
                         ))
                     }
-                    <MenuItem value={' '}> По убыванию</MenuItem>
+                    <MenuItem value={''}> По умолчанию</MenuItem>
                 </Select>
             </FormControl>
         </Box>
